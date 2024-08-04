@@ -18,5 +18,5 @@ const server = http.createServer((req, res)=>{
 })
 
 server.listen(2000, ()=>{
-    console.log("8000 start")
+    console.log("2000 start")
 })
