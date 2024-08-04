@@ -17,6 +17,6 @@ const server = http.createServer((req, res)=>{
     }
 })
 
-server.listen(2000, ()=>{
+server.listen(2000,'127.0.0.1', ()=>{
     console.log("2000 start")
 })
