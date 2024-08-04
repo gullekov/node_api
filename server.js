@@ -1,4 +1,4 @@
-const http = require('http');
+const http = require('node:http');
 const fs = require('fs');
 
 
@@ -7,14 +7,16 @@ const server = http.createServer((req, res)=>{
     const pathName = req.url;
 
     if(pathName === '/' || '/about'){
-        res.end("THIS IS ABOUT PAGE")
+        res.writeHead(200, {'Content-type': 'text/plain'})
+        res.end("BAS SAHYPA")
     } else if(pathName === '/wakalar'){
+        res.writeHead(200)
         res.end("THIS IS WAKALAR")
     }else{
         res.end("404 NOT FOUND")
     }
 })
 
-server.listen(8000, 'localhost', ()=>{
+server.listen(2000, ()=>{
     console.log("8000 start")
 })
